@@ -26,12 +26,6 @@ export PGHOST=/tmp
 # grep colorize
 export GREP_OPTIONS="--color=auto"
 
-# Setting PATH for Python 3.3
-if [ -d /Library/Frameworks/Python.framework/Versions/3.3 ]; then
-        PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:${PATH}"
-        export PATH
-fi
-
 # bash completion
 if [ -f /usr/local/bin/brew ]; then
     if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
