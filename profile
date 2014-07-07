@@ -144,8 +144,8 @@ function prompt_command {
 
     # get cursor position and add new line if we're not in first column
     # cool'n'dirty trick (http://stackoverflow.com/a/2575525/1164595)
-    echo -en "\033[6n" && read -sdR CURPOS
-    [[ ${CURPOS##*;} -gt 1 ]] && echo "${color_error}↵${color_error_off}"
+    # echo -en "\033[6n" && read -sdR CURPOS
+    # [[ ${CURPOS##*;} -gt 1 ]] && echo "${color_error}↵${color_error_off}"
 }
 
 # set prompt command (title update and color prompt)
