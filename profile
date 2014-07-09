@@ -137,9 +137,9 @@ function prompt_command {
 
     # set new color prompt
     if [[ ! -z $VIRTUAL_ENV ]]; then
-        PS1="${PS1_VENV}\n${color_white}${PWDNAME}${color_off}${PS1_GIT} ${color_yellow}➜${color_off} "
+        PS1="${color_white}${PWDNAME}${color_off}${PS1_GIT} ${PS1_VENV}\n${color_yellow}➜${color_off} "
     else
-        PS1="${color_white}${PWDNAME}${color_off}${PS1_GIT} ${color_yellow}➜${color_off} "
+        PS1="${color_white}${PWDNAME}${color_off}${PS1_GIT}\n${color_yellow}➜${color_off} "
     fi
 
     # get cursor position and add new line if we're not in first column
