@@ -47,7 +47,12 @@ unset DYLD_LIBRARY_PATH
 [ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
 [ -d /usr/local/mysql/bin ] && PATH=/usr/local/mysql/bin:$PATH
 [ -d /usr/local/share/npm/bin ] && PATH=/usr/local/share/npm/bin:$PATH
-[ -d /usr/local/opt/go/libexec/bin ] && PATH=/usr/local/opt/go/libexec/bin:$PATH
+
+# Golang
+if [ -d /usr/local/opt/go ]; then
+    export GOPATH=/usr/local/opt/go
+    PATH=$GOPATH/bin:$PATH
+fi
 
 # setup color variables
 color_is_on=
