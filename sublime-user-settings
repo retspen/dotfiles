@@ -1,6 +1,11 @@
-"theme": "Soda Light 3.sublime-theme",
-"soda_classic_tabs": true,
-"pep8_ignore":
-[
-    "E501"
-],
+{
+	"color_scheme": "Packages/User/Monokai (SL) (SublimePythonIDE).tmTheme",
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+    "pep8_ignore":
+    [
+        "E501"
+    ],
+}
