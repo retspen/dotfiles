@@ -1,11 +1,12 @@
 {
-	"color_scheme": "Packages/User/Monokai (SL) (SublimePythonIDE).tmTheme",
-	"ignored_packages":
-	[
-		"Vintage"
-	],
+    "color_scheme": "Packages/User/Monokai (SL) (SublimePythonIDE).tmTheme",
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
     "pep8_ignore":
     [
         "E501"
     ],
 }
+
