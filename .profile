@@ -24,7 +24,8 @@ fi
 export PGHOST=/tmp
 
 # grep colorize
-export GREP_OPTIONS="--color=auto"
+alias grep="grep --color=auto"
+unset GREP_OPTIONS
 
 # bash completion
 if [ -f /usr/local/bin/brew ]; then
