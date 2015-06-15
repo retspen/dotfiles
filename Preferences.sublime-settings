@@ -1,0 +1,8 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Material-Theme (SL).tmTheme",
+	"pep8_ignore":
+	[
+		"E501"
+	],
+	"theme": "Material-Theme.sublime-theme"
+}
