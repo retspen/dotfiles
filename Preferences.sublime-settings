@@ -5,9 +5,9 @@
 		"E501"
 	],
 	"theme": "Material-Theme.sublime-theme",
-    "overlay_scroll_bars": "enabled",
-    "line_padding_top": 3,
-    "line_padding_bottom": 3,
-    "always_show_minimap_viewport": true,
-    "bold_folder_labels": true
+    	"overlay_scroll_bars": "enabled",
+    	"line_padding_top": 3,
+    	"line_padding_bottom": 3,
+    	"always_show_minimap_viewport": true,
+    	"bold_folder_labels": true
 }
