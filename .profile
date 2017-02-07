@@ -159,3 +159,11 @@ function prompt_command {
 PROMPT_COMMAND=prompt_command
 # set new b/w prompt (will be overwritten in 'prompt_command' later for color prompt)
 PS1='\u@${LOCAL_HOSTNAME}:\w\$ '
+
+function weather {
+    curl -s wttr.in/zaporizhzhy?lang=ru | grep -v Follow | grep -v Check | grep -v lang
+}
+
+function moon {
+    curl -s wttr.in/Moon | grep -v Follow | grep -v Check
+}
