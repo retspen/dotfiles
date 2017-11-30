@@ -3,6 +3,12 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# add local bin path
+[ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
+[ -d $HOME/.local/sbin ] && PATH=$HOME/.local/sbin:$PATH
+[ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
+[ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
+
 # LANGUAGE
 : ${LANG:="en_US.UTF-8"}
 : ${LANGUAGE:="en"}
@@ -23,12 +29,6 @@ unset GREP_OPTIONS
 
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoreboth
-
-# add local bin path
-[ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
-[ -d $HOME/.local/sbin ] && PATH=$HOME/.local/sbin:$PATH
-[ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
-[ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
 
 # setup color variables
 color_is_on=
