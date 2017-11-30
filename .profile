@@ -136,9 +136,9 @@ PROMPT_COMMAND=prompt_command
 PS1='\u@${LOCAL_HOSTNAME}:\w\$ '
 
 function weather {
-    curl -s wttr.in/zaporizhzhy?lang=ru | grep -v Follow | grep -v Check | grep -v lang
+    curl -s wttr.in/zaporizhzhy?lang=ru
 }
 
 function moon {
-    curl -s wttr.in/Moon | grep -v Follow | grep -v Check
+    curl -s wttr.in/Moon
 }
