@@ -14,46 +14,21 @@ export LANG LANGUAGE LC_CTYPE LC_ALL
 : ${FTP_PASSIVE:=1}
 export FTP_PASSIVE
 
-# python virtualenv
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export VIRTUAL_ENV_DISABLE_PROMPT=1
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
-
-# Postgres won't work without this
-export PGHOST=/tmp
+# pipenv
+eval "$(pipenv --completion)"
 
 # grep colorize
 alias grep="grep --color=auto"
 unset GREP_OPTIONS
 
-# bash completion
-if [ -f /usr/local/bin/brew ]; then
-    if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
-        . `/usr/local/bin/brew --prefix`/etc/bash_completion
-    fi
-fi
-
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoreboth
 
-# unset this because of nasty OS X bug with annoying message:
-# "dyld: DYLD_ environment variables being ignored because main executable (/usr/bin/sudo) is setuid or setgid"
-# this is not correct, but Apple is too lazy to fix this
-unset DYLD_LIBRARY_PATH
-
 # add local bin path
-[ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
+[ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
+[ -d $HOME/.local/sbin ] && PATH=$HOME/.local/sbin:$PATH
 [ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
 [ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
-[ -d /usr/local/mysql/bin ] && PATH=/usr/local/mysql/bin:$PATH
-[ -d /usr/local/share/npm/bin ] && PATH=/usr/local/share/npm/bin:$PATH
-
-# Golang
-if [ -d /usr/local/opt/go ]; then
-    export GOPATH=/usr/local/opt/go
-    PATH=$GOPATH/bin:$PATH
-fi
 
 # setup color variables
 color_is_on=
