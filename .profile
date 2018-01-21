@@ -20,14 +20,16 @@ export LANG LANGUAGE LC_CTYPE LC_ALL
 : ${FTP_PASSIVE:=1}
 export FTP_PASSIVE
 
-# pipenv
-eval "$(pipenv --completion)"
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
-# grep colorize
+# Grep colorize
 alias grep="grep --color=auto"
 unset GREP_OPTIONS
 
-# don't put duplicate lines in the history
+# Don't put duplicate lines in the history
 export HISTCONTROL=ignoreboth
 
 # setup color variables
