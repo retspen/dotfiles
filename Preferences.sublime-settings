@@ -1,8 +1,0 @@
-{
-	"pep8_ignore":
-	[
-		"E501"
-	],
-	"soda_classic_tabs": true,
-	"theme": "Soda Light 3.sublime-theme"
-}
