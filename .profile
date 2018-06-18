@@ -25,9 +25,24 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# Virtualenvwrapper
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    . /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # Grep colorize
 alias grep="grep --color=auto"
 unset GREP_OPTIONS
+
+# Add Visual Studio Code (code)
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+# Python ENV
+export PATH="~/Library/Python/2.7/bin:~/Library/Python/3.6/bin:$PATH"
+
+# GNU sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Don't put duplicate lines in the history
 export HISTCONTROL=ignoreboth
