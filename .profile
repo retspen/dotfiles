@@ -1,13 +1,14 @@
 # ~/.profile
 
+# Tmux alias
+alias tmux="tmux attach -t main || tmux new -s main"
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # add local bin path
 [ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
-[ -d $HOME/.local/sbin ] && PATH=$HOME/.local/sbin:$PATH
 [ -d /usr/local/bin ] && PATH=/usr/local/bin:$PATH
-[ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
 
 # LANGUAGE
 : ${LANG:="en_US.UTF-8"}
@@ -20,29 +21,9 @@ export LANG LANGUAGE LC_CTYPE LC_ALL
 : ${FTP_PASSIVE:=1}
 export FTP_PASSIVE
 
-# Bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
-# Virtualenvwrapper
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-    . /usr/local/bin/virtualenvwrapper.sh
-fi
-
 # Grep colorize
 alias grep="grep --color=auto"
 unset GREP_OPTIONS
-
-# Add Visual Studio Code (code)
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-# Python ENV
-export PATH="~/Library/Python/2.7/bin:~/Library/Python/3.6/bin:$PATH"
-
-# GNU sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Don't put duplicate lines in the history
 export HISTCONTROL=ignoreboth
@@ -151,11 +132,3 @@ function prompt_command {
 PROMPT_COMMAND=prompt_command
 # set new b/w prompt (will be overwritten in 'prompt_command' later for color prompt)
 PS1='\u@${LOCAL_HOSTNAME}:\w\$ '
-
-function weather {
-    curl -s wttr.in/zaporizhzhy?lang=ru
-}
-
-function moon {
-    curl -s wttr.in/Moon
-}
