@@ -100,3 +100,6 @@ export LC_CTYPE=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux attach -t main || tmux new -s main"
+
+# Eval
+eval "$(starship init zsh)"
