@@ -1,0 +1,26 @@
+{
+	"font_face": "Jetbrains Mono",
+	"font_size": 15,
+  "rulers": [120],
+  "translate_tabs_to_spaces": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+    "file_exclude_patterns":
+    [
+        ".DS_Store",
+        "*.pid",
+        "*.pyc",
+    ],
+    "folder_exclude_patterns":
+    [
+        ".git",
+        ".run",
+        ".mysql",
+        ".vagrant",
+        "__pycache__",
+        "venv",
+        ".idea",
+    ],
+}
