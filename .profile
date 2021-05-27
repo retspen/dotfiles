@@ -18,6 +18,20 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# PyENV
+if ! command -v "pyenv" > /dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+fi
+
+# Starship
+if ! command -v "pyenv" > /dev/null 2>&1; then
+    eval "$(starship init bash)"
+fi
+
 # set PATH for GOlang
 if [ -d "/usr/local/go/bin" ] ; then
     PATH="/usr/local/go/bin:$PATH"
@@ -26,9 +40,6 @@ fi
 # Alias
 alias tmux="tmux attach -t main || tmux new -s main"
 alias venv="python3 -m venv venv && . venv/bin/activate && pip install -U pip setuptools wheels &> /dev/null"
-
-# Eval
-eval "$(starship init bash)"
 
 # Short prompt
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
