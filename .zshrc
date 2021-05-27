@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -102,5 +104,9 @@ export LC_CTYPE=en_US.UTF-8
 alias tmux="tmux attach -t main || tmux new -s main"
 alias venv="python3 -m venv venv && . venv/bin/activate && pip install -U pip setuptools wheels &> /dev/null"
 
-# Eval
+# Starship
 eval "$(starship init zsh)"
+
+# PyENV
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
