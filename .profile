@@ -19,16 +19,15 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # PyENV
-if ! command -v "pyenv" > /dev/null 2>&1; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    
+if command -v "$HOME/.pyenv/bin/pyenv" > /dev/null 2>&1; then
+    export PATH="$HOME/.pyenv/bin:$PATH"
+
     eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
 fi
 
 # Starship
-if ! command -v "pyenv" > /dev/null 2>&1; then
+if ! command -v "starship" > /dev/null 2>&1; then
     eval "$(starship init bash)"
 fi
 
