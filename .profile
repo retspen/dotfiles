@@ -36,6 +36,11 @@ if [ -d "/usr/local/go/bin" ] ; then
     PATH="/usr/local/go/bin:$PATH"
 fi
 
+# Homebrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Alias
 alias tmux="tmux attach -t main || tmux new -s main"
 alias venv="python3 -m venv venv && . venv/bin/activate && pip install -U pip setuptools wheels &> /dev/null"
