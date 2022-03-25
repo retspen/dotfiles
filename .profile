@@ -31,6 +31,12 @@ if command -v "starship" > /dev/null 2>&1; then
     eval "$(starship init bash)"
 fi
 
+# Poetry
+if command -v "$HOME/.poetry/bin/poetry" > /dev/null 2>&1; then
+    export PATH="$HOME/.poetry/bin:$PATH"
+
+fi
+
 # set PATH for GOlang
 if [ -d "/usr/local/go/bin" ] ; then
     PATH="/usr/local/go/bin:$PATH"
