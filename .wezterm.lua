@@ -6,5 +6,11 @@ return {
  window_close_confirmation = 'NeverPrompt',
  color_scheme = 'Builtin Solarized Dark', 
  font = wezterm.font 'JetBrains Mono',
- font_size = 15.0
+ font_size = 15.0,
+ window_padding = {
+  left = 10,
+  right = 10,
+  top = 10,
+  bottom = 10,
+ }
 }
