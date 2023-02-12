@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/.local/bin::$PYENV_ROOT/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # Path to your oh-my-zsh installation.
