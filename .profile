@@ -18,6 +18,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Starship
+if command -v "starship" > /dev/null 2>&1; then
+    eval "$(starship init bash)"
+fi
+
 # PyENV
 if command -v "$HOME/.pyenv/bin/pyenv" > /dev/null 2>&1; then
     export PATH="$HOME/.pyenv/bin:$PATH"
@@ -26,30 +31,14 @@ if command -v "$HOME/.pyenv/bin/pyenv" > /dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
-# Starship
-if command -v "starship" > /dev/null 2>&1; then
-    eval "$(starship init bash)"
-fi
-
 # Poetry
 if command -v "$HOME/.poetry/bin/poetry" > /dev/null 2>&1; then
     export PATH="$HOME/.poetry/bin:$PATH"
 
 fi
 
-# set PATH for GOlang
-if [ -d "/usr/local/go/bin" ] ; then
-    PATH="/usr/local/go/bin:$PATH"
-fi
-
-# Homebrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-# Alias
+# Aliases
 alias tmux="tmux attach -t main || tmux new -s main"
-alias venv="python3 -m venv venv && . venv/bin/activate && pip install -U pip setuptools wheels &> /dev/null"
 
 # Short prompt
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+#PS1='\w \$ '
