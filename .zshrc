@@ -1,7 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,11 +68,20 @@ ZSH_THEME="half-life"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git kubectl gh poetry)
+plugins=(git brew docker ansible httpie kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Starship
+eval "$(starship init zsh)"
+
+# PyENV
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -102,11 +109,3 @@ export LC_CTYPE=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux attach -t main || tmux new -s main"
-alias venv="python3 -m venv venv && . venv/bin/activate && pip install -U pip setuptools wheels &> /dev/null"
-
-# Starship
-eval "$(starship init zsh)"
-
-# PyENV
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
