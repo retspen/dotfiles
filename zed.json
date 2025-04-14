@@ -1,0 +1,115 @@
+// Zed settings
+{
+  "icon_theme": "Material Icon Theme",
+  "assistant": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "enable_experimental_live_diffs": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
+    },
+    "version": "2"
+  },
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 120,
+  "show_edit_predictions": true,
+  "collaboration_panel": {
+    "button": false
+  },
+  "auto_signature_help": true,
+  "vim_mode": false,
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "project_panel": {
+    "indent_size": 16
+  },
+  "terminal": {
+    "dock": "bottom",
+    "detect_venv": { "on": { "activate_script": "default" } },
+    "env": { "EDITOR": "zed --wait" }
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "theme": "Catppuccin Frappé - No Italics",
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_close_button": "hover"
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.venv",
+    "**/.idea",
+    "**/.vscode",
+    "**/.mysql",
+    "**/.DS_Store",
+    "**/.devcontainer",
+    "**/node_modules",
+    "**/__pycache__"
+  ],
+  "languages": {
+    "JavaScript": {
+      "tab_size": 2
+    },
+    "Python": {
+      "tab_size": 4,
+      "format_on_save": "on",
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 120,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace"
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  }
+}
