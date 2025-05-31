@@ -70,9 +70,7 @@ ZSH_THEME="half-life"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm brew docker ansible httpie kubectl 
-         zsh-autosuggestions zsh-syntax-highlighting 
-         fast-syntax-highlighting zsh-autocomplete)
+plugins=(git brew docker ansible httpie kubectl zsh-completions zsh-syntax-highlighting fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
