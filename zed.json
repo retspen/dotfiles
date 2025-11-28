@@ -1,14 +1,12 @@
 // Zed settings
 {
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Catppuccin Macchiato",
   "agent": {
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "enable_experimental_live_diffs": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
-    }
+      "model": "claude-opus-4.5"
+    },
+    "model_parameters": []
   },
   "soft_wrap": "editor_width",
   "preferred_line_length": 120,
@@ -76,10 +74,10 @@
       "language_servers": ["pyright", "ruff"],
       "formatter": [
         {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
+          "code_action": "source.organizeImports.ruff"
+        },
+        {
+          "code_action": "source.fixAll.ruff"
         },
         {
           "language_server": {
