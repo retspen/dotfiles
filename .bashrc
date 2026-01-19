@@ -24,6 +24,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# Aliases
+alias pbcopy="xclip -sel clip"
+alias tmux="tmux attach -t main || tmux new -s main"
+
 # Starship
 if command -v "starship" > /dev/null 2>&1; then
     eval "$(starship init bash)"
