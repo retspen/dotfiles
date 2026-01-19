@@ -1,57 +1,56 @@
-// Zed settings
 {
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": "Catppuccin Latte",
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-opus-4.5"
+      "model": "gpt-5-codex",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "soft_wrap": "editor_width",
   "preferred_line_length": 120,
   "show_edit_predictions": true,
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "auto_signature_help": true,
   "vim_mode": false,
   "ui_font_size": 15,
   "buffer_font_size": 14,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "project_panel": {
-    "indent_size": 16
+    "indent_size": 16,
   },
   "terminal": {
     "dock": "bottom",
     "detect_venv": { "on": { "activate_script": "default" } },
-    "env": { "EDITOR": "zed --wait" }
+    "env": { "EDITOR": "zed --wait" },
   },
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
   },
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
   },
-  "theme": "Catppuccin Frappé - No Italics",
+  "theme": "Catppuccin Macchiato - No Italics",
   "tabs": {
     "git_status": true,
     "file_icons": true,
-    "show_close_button": "hover"
+    "show_close_button": "hover",
   },
   "tab_bar": {
     "show": true,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -62,11 +61,11 @@
     "**/.DS_Store",
     "**/.devcontainer",
     "**/node_modules",
-    "**/__pycache__"
+    "**/__pycache__",
   ],
   "languages": {
     "JavaScript": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Python": {
       "tab_size": 4,
@@ -74,18 +73,18 @@
       "language_servers": ["pyright", "ruff"],
       "formatter": [
         {
-          "code_action": "source.organizeImports.ruff"
+          "code_action": "source.organizeImports.ruff",
         },
         {
-          "code_action": "source.fixAll.ruff"
+          "code_action": "source.fixAll.ruff",
         },
         {
           "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
-    }
+            "name": "ruff",
+          },
+        },
+      ],
+    },
   },
   "lsp": {
     "ruff": {
@@ -93,20 +92,20 @@
         "settings": {
           "lineLength": 120,
           "lint": {
-            "extendSelect": ["I"]
-          }
-        }
-      }
+            "extendSelect": ["I"],
+          },
+        },
+      },
     },
     "pyright": {
       "settings": {
         "python.analysis": {
-          "diagnosticMode": "workspace"
+          "diagnosticMode": "workspace",
         },
         "python": {
-          "pythonPath": ".venv/bin/python"
-        }
-      }
-    }
-  }
+          "pythonPath": ".venv/bin/python",
+        },
+      },
+    },
+  },
 }
