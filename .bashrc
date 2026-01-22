@@ -25,7 +25,8 @@ fi
 unset rc
 
 # Aliases
-alias pbcopy="xclip -sel clip"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 alias tmux="tmux attach -t main || tmux new -s main"
 
 # Starship
