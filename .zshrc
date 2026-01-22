@@ -87,7 +87,7 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
 # 1Password
-export SSH_AUTH_SOCK="~/.1password/agent.sock"
+export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
