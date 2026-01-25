@@ -33,15 +33,3 @@ alias tmux="tmux attach -t main || tmux new -s main"
 if command -v "starship" > /dev/null 2>&1; then
     eval "$(starship init bash)"
 fi
-
-# NVM
-if [[ -d "$HOME/.nvm" ]]; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
-
-# LM Studio
-if ! [[ "$PATH" =~ "$HOME/.lmstudio/bin:" ]]; then
-    export PATH="$PATH:$HOME/.lmstudio/bin"
-fi
