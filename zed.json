@@ -22,7 +22,7 @@
         "model": "claude-opus-4.5",
       },
     ],
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-opus-4.5",
