@@ -1,9 +1,31 @@
 {
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "git_panel": {
+    "sort_by_path": false,
+    "tree_view": false,
+  },
   "icon_theme": "Catppuccin Latte",
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.2-codex",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-3-pro-preview",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+      },
+    ],
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-codex",
+      "model": "claude-opus-4.5",
     },
     "model_parameters": [],
   },
@@ -17,9 +39,6 @@
   "vim_mode": false,
   "ui_font_size": 15,
   "buffer_font_size": 14,
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "project_panel": {
     "indent_size": 16,
   },
@@ -94,16 +113,6 @@
           "lint": {
             "extendSelect": ["I"],
           },
-        },
-      },
-    },
-    "pyright": {
-      "settings": {
-        "python.analysis": {
-          "diagnosticMode": "workspace",
-        },
-        "python": {
-          "pythonPath": ".venv/bin/python",
         },
       },
     },
