@@ -76,8 +76,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Homebrew
+if command -v "brew" > /dev/null 2>&1; then
+  eval "$(brew shellenv)"
+fi
+
 # Starship
-eval "$(starship init zsh)"
+if command -v "starship" > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi  
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -108,6 +115,6 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
+alias zshconfig="code $HOME/.zshrc"
+alias ohmyzsh="code $HOME/.oh-my-zsh"
 alias tmux="tmux attach -t main || tmux new -s main"
