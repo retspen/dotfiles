@@ -79,6 +79,8 @@ source $ZSH/oh-my-zsh.sh
 # Homebrew
 if command -v "brew" > /dev/null 2>&1; then
   eval "$(brew shellenv)"
+  autoload -Uz compinit
+  compinit
 fi
 
 # Starship
