@@ -50,6 +50,11 @@
   "scrollbar": {
     "show": "never",
   },
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": false,
+    "runnables": false,
+  },
   "inlay_hints": {
     "enabled": true,
   },
