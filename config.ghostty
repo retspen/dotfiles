@@ -1,0 +1,17 @@
+font-family = JetBrains Mono Light
+font-size = 15
+
+theme = Catppuccin Mocha
+
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+window-padding-x = 16
+window-padding-y = 16
+window-padding-balance = true
+window-padding-color = background
+
+scrollbar = never
+
+window-save-state = always
+confirm-close-surface = always
