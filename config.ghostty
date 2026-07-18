@@ -13,5 +13,7 @@ window-padding-color = background
 
 scrollbar = never
 
+tab-inherit-working-directory = false
+
 window-save-state = always
 confirm-close-surface = always
