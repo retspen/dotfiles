@@ -1,6 +1,6 @@
 {
   "edit_predictions": {
-    "provider": "",
+    "provider": "none",
   },
   "git_panel": {
     "sort_by_path": false,
