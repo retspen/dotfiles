@@ -8,26 +8,6 @@
   },
   "icon_theme": "Catppuccin Latte",
   "agent": {
-    "favorite_models": [
-      {
-        "provider": "copilot_chat",
-        "model": "gpt-5.2-codex",
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "gemini-3-pro-preview",
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-opus-4.5",
-      },
-    ],
-    "default_profile": "write",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.5",
-    },
-    "model_parameters": [],
   },
   "soft_wrap": "editor_width",
   "preferred_line_length": 120,
