@@ -17,3 +17,6 @@ tab-inherit-working-directory = false
 
 window-save-state = always
 confirm-close-surface = always
+
+macos-titlebar-style=tabs
+macos-icon=xray
